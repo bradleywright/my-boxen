@@ -20,4 +20,11 @@ class people::bradleywright {
     source  => 'bradleywright/dotfiles',
     require => File[$projects]
   }
+
+  $emacs = "${projects}/emacs-d"
+
+  repository { $emacs:
+    source  => 'bradleywright/emacs-d',
+    require => File[$projects]
+  }
 }
