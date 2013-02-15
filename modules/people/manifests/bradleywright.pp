@@ -28,4 +28,15 @@ class people::bradleywright {
     source  => 'bradleywright/emacs-d',
     require => File[$projects]
   }
+
+  package {
+    [
+     'reattach-to-user-namespace',
+     'tmux',
+     'tree',
+     'wget',
+     'zsh-completions',
+     'zsh-lovers',
+     ]:
+  }
 }
