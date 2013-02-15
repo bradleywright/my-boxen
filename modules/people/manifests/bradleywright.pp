@@ -5,6 +5,7 @@ class people::bradleywright {
   include dropbox
   include slate
   include adium
+  include emacs
 
   $home     = "/Users/${::luser}"
   $projects = "${home}/Projects"
