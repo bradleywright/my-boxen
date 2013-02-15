@@ -6,6 +6,7 @@ class people::bradleywright {
   include slate
   include adium
   include emacs
+  include iterm2::dev
 
   $home     = "/Users/${::luser}"
   $projects = "${home}/Projects"
