@@ -5,7 +5,7 @@ class people::bradleywright {
   include dropbox
   include slate
   include adium
-  include emacs
+  include emacs::pretest
   include iterm2::dev
 
   $home     = "/Users/${::luser}"
