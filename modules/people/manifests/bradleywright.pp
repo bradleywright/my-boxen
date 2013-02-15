@@ -1,12 +1,12 @@
 class people::bradleywright {
-  include zsh
+  include adium
   include alfred
   include chrome
   include dropbox
-  include slate
-  include adium
   include emacs::pretest
   include iterm2::dev
+  include slate
+  include zsh
 
   $home     = "/Users/${::luser}"
   $projects = "${home}/Projects"
