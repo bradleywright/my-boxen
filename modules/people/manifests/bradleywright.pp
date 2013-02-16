@@ -40,6 +40,26 @@ class people::bradleywright {
      ]:
   }
 
+  exec { 'remove-spotlight':
+    command => 'mv /System/Library/CoreServices/Search.bundle /System/Library/CoreServices/Search.bundle.bak && killall SystemUIServer',
+    unless  => 'test ! -e /System/Library/CoreServices/Search.bundle',
+  }
+
+  boxen::osx_defaults { 'turn-off-dashboard':
+    ensure => present,
+    domain => 'com.apple.dashboard',
+    key    => 'mcx-disabled',
+    value  => 1,
+    user   => $user,
+    notify => Exec['kill-dock'],
+  }
+
+  exec { 'kill-dock':
+    command     => 'killall Dock',
+    user        => $user,
+    refreshonly => true,
+  }
+
   case $hostname {
     'kernel': {
       # Home machine
