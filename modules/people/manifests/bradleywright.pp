@@ -39,4 +39,17 @@ class people::bradleywright {
      'zsh-lovers',
      ]:
   }
+
+  if $::luser == 'bradleywright' {
+    # GDS machine
+    package {
+      [
+       'parallel'
+       ]:
+    }
+  }
+  elsif $::user == 'bradleyw' {
+    # Home machine
+    include caffeine
+  }
 }
