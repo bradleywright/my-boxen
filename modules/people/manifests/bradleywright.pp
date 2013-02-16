@@ -31,6 +31,7 @@ class people::bradleywright {
 
   package {
     [
+     'bash-completion',
      'reattach-to-user-namespace',
      'tmux',
      'tree',
