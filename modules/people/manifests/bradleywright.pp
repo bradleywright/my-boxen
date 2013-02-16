@@ -65,6 +65,19 @@ class people::bradleywright {
       # Home machine
       include caffeine
       include skype
+
+      file { "${home}/.local_zshrc":
+        mode    => '0644',
+        content => 'cdpath=(~/Projects ~)',
+      }
+
+      file { "${home}/.localgitconfig":
+        mode    => '0644',
+        content => "[user]
+    email = brad@intranation.com
+[credential]
+    helper = osxkeychain",
+      }
     }
     /^GDS.*$/: {
       # GDS machine
@@ -75,6 +88,19 @@ class people::bradleywright {
       }
       # Work email is Gmail
       include mailplane::beta
+
+      file { "${home}/.local_zshrc":
+        mode    => '0644',
+        content => 'cdpath=(~/Work ~/Projects ~)',
+      }
+
+      file { "${home}/.localgitconfig":
+        mode    => '0644',
+        content => '[user]
+    email = bradley.wright@digital.cabinet-office.gov.uk
+[credential]
+    helper = osxkeychain',
+      }
     }
   }
 }
