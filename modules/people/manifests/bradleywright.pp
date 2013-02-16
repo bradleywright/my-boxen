@@ -40,18 +40,21 @@ class people::bradleywright {
      ]:
   }
 
-  if $::luser == 'bradleywright' {
-    # GDS machine
-    package {
-      [
-       'parallel'
-       ]:
+  case $hostname {
+    'kernel': {
+      # Home machine
+      include caffeine
+      include skype
     }
-    # Work email is Gmail
-    include mailplane::beta
-  }
-  elsif $::user == 'bradleyw' {
-    # Home machine
-    include caffeine
+    /^GDS.*$/: {
+      # GDS machine
+      package {
+        [
+         'parallel'
+         ]:
+      }
+      # Work email is Gmail
+      include mailplane::beta
+    }
   }
 }
