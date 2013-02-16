@@ -47,6 +47,8 @@ class people::bradleywright {
        'parallel'
        ]:
     }
+    # Work email is Gmail
+    include mailplane::beta
   }
   elsif $::user == 'bradleyw' {
     # Home machine
