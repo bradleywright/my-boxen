@@ -1,7 +1,7 @@
 GITHUBTARBALL
   remote: boxen/puppet-alfred
   specs:
-    alfred (1.0.0)
+    alfred (1.0.1)
 
 GITHUBTARBALL
   remote: boxen/puppet-boxen
@@ -104,7 +104,7 @@ GITHUBTARBALL
     stdlib (3.0.0)
 
 DEPENDENCIES
-  alfred (= 1.0.0)
+  alfred (= 1.0.1)
   boxen (= 1.0.2)
   caffeine (= 1.0.0)
   chrome (= 1.0.0)
