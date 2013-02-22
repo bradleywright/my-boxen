@@ -53,7 +53,6 @@ node default {
   include dnsmasq
   include git
   include hub
-  include nginx
   include nvm
   include ruby
 
@@ -63,8 +62,6 @@ node default {
   }
 
   # node versions
-  include nodejs::0-4
-  include nodejs::0-6
   include nodejs::0-8
 
   # default ruby versions
