@@ -12,8 +12,8 @@ class people::bradleywright {
   include turn-off-dashboard
   include zsh
 
-  $home     = "/Users/${::luser}"
-  $projects = "${home}/Projects"
+  $my_home  = "/Users/${::luser}"
+  $projects = "${my_home}/Projects"
 
   file { $projects:
     ensure => directory,
@@ -57,14 +57,17 @@ class people::bradleywright {
      ]:
   }
 
-  file { "${home}/.local_zshrc":
+  file { "${my_home}/.local_zshrc":
     mode    => '0644',
-    content => 'cdpath=(~/Projects ~)
+    content => "cdpath=(~/Projects ~)
 
-[[ -d /Applications/Emacs.app/Contents/MacOS/bin ]] && path=(/Applications/Emacs.app/Contents/MacOS/bin $path)',
+# Boxen
+[[ -f ${boxen::config::boxen_home}/env.sh ]] && . ${boxen::config::boxen_home}/env.sh
+
+[[ -d /Applications/Emacs.app/Contents/MacOS/bin ]] && path=(/Applications/Emacs.app/Contents/MacOS/bin \$path)",
   }
 
-  file { "${home}/.localgitconfig":
+  file { "${my_home}/.localgitconfig":
     mode    => '0644',
     content => "[user]
     email = brad@intranation.com
