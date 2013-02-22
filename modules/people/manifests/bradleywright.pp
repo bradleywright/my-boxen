@@ -1,13 +1,15 @@
 class people::bradleywright {
   include adium
   include alfred
+  include caffeine
   include chrome
   include dropbox
   include emacs::pretest
   include iterm2::dev
-  include slate
   include remove-spotlight
   include skype
+  include slate
+  include turn-off-dashboard
   include zsh
 
   $home     = "/Users/${::luser}"
@@ -48,47 +50,11 @@ class people::bradleywright {
     content => 'cdpath=(~/Projects ~)',
   }
 
-  case $hostname {
-    'kernel': {
-      # Home machine
-      include caffeine
-      include skype
-
-      file { "${home}/.local_zshrc":
-        mode    => '0644',
-        content => 'cdpath=(~/Projects ~)',
-      }
-
-      file { "${home}/.localgitconfig":
-        mode    => '0644',
-        content => "[user]
+  file { "${home}/.localgitconfig":
+    mode    => '0644',
+    content => "[user]
     email = brad@intranation.com
 [credential]
     helper = osxkeychain",
-      }
-    }
-    /^GDS.*$/: {
-      # GDS machine
-      package {
-        [
-         'parallel'
-         ]:
-      }
-      # Work email is Gmail
-      include mailplane::beta
-
-      file { "${home}/.local_zshrc":
-        mode    => '0644',
-        content => 'cdpath=(~/Work ~/Projects ~)',
-      }
-
-      file { "${home}/.localgitconfig":
-        mode    => '0644',
-        content => '[user]
-    email = bradley.wright@digital.cabinet-office.gov.uk
-[credential]
-    helper = osxkeychain',
-      }
-    }
   }
 }
