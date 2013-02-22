@@ -47,7 +47,9 @@ class people::bradleywright {
 
   file { "${home}/.local_zshrc":
     mode    => '0644',
-    content => 'cdpath=(~/Projects ~)',
+    content => 'cdpath=(~/Projects ~)
+
+[[ -d /Applications/Emacs.app/Contents/MacOS/bin ]] && path=(/Applications/Emacs.app/Contents/MacOS/bin $path)',
   }
 
   file { "${home}/.localgitconfig":
