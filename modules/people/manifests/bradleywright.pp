@@ -23,14 +23,26 @@ class people::bradleywright {
 
   repository { $dotfiles:
     source  => 'bradleywright/dotfiles',
-    require => File[$projects]
+    require => File[$projects],
+    notify  => Exec['bradleywright-make-dotfiles'],
+  }
+
+  exec { 'bradleywright-make-dotfiles':
+    command     => "cd ${dotfiles} && make",
+    refreshonly => true,
   }
 
   $emacs = "${projects}/emacs-d"
 
   repository { $emacs:
     source  => 'bradleywright/emacs-d',
-    require => File[$projects]
+    require => File[$projects],
+    notify  => Exec['bradleywright-make-emacs-d'],
+  }
+
+  exec { 'bradleywright-make-emacs-d':
+    command     => "cd ${emacs} && make",
+    refreshonly => true,
   }
 
   package {
