@@ -45,6 +45,14 @@ class people::bradleywright {
     refreshonly => true,
   }
 
+  file { "${my_home}/.emacs.d/local/${::hostname}.el":
+    mode    => '0644',
+    content => "(exec-path-from-shell-copy-env \"BOXEN_NVM_DIR\")
+(exec-path-from-shell-copy-env \"BOXEN_NVM_DEFAULT_VERSION\")
+",
+    require => Repository[$emacs],
+  }
+
   package {
     [
      'bash-completion',
@@ -59,12 +67,16 @@ class people::bradleywright {
 
   file { "${my_home}/.local_zshrc":
     mode    => '0644',
-    content => "cdpath=(~/Projects ~)
+    content => 'cdpath=(~/Projects ~)
+',
+  }
 
-# Boxen
-[[ -f ${boxen::config::boxen_home}/env.sh ]] && . ${boxen::config::boxen_home}/env.sh
+  file { "${my_home}/.local_zshenv":
+    mode    => '0644',
+    content => "[[ -f ${boxen::config::boxen_home}/env.sh ]] && . ${boxen::config::boxen_home}/env.sh
 
-[[ -d /Applications/Emacs.app/Contents/MacOS/bin ]] && path=(/Applications/Emacs.app/Contents/MacOS/bin \$path)",
+[[ -f /Applications/Emacs.app/Contents/MacOS/bin/emacsclient ]] && path=(/Applications/Emacs.app/Contents/MacOS/bin \$path)
+"
   }
 
   file { "${my_home}/.localgitconfig":
