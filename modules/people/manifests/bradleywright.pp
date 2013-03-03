@@ -75,7 +75,10 @@ class people::bradleywright {
     mode    => '0644',
     content => "[[ -f ${boxen::config::boxen_home}/env.sh ]] && . ${boxen::config::boxen_home}/env.sh
 
-[[ -f /Applications/Emacs.app/Contents/MacOS/bin/emacsclient ]] && path=(/Applications/Emacs.app/Contents/MacOS/bin \$path)
+if [ -d /Applications/Emacs.app ]; then
+    path=(/Applications/Emacs.app/Contents/MacOS/bin \$path)
+    alias emacs=/Applications/Emacs.app/Contents/MacOS/Emacs-10.7
+fi
 "
   }
 
