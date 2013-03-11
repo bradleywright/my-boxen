@@ -8,6 +8,6 @@
 class emacs::pretest {
   package { 'Emacs':
     provider => 'appdmg',
-    source   => 'http://emacsformacosx.com/emacs-builds/Emacs-pretest-24.2.93-universal-10.6.8.dmg'
+    source   => 'http://emacsformacosx.com/emacs-builds/Emacs-pretest-24.3-rc3-universal-10.6.8.dmg'
   }
 }
