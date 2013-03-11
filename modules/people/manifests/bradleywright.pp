@@ -4,7 +4,7 @@ class people::bradleywright {
   include caffeine
   include chrome
   include dropbox
-  include emacs::pretest
+  include emacs
   include iterm2::dev
   include remove-spotlight
   include skype
