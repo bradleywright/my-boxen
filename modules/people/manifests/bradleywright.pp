@@ -4,7 +4,7 @@ class people::bradleywright {
   include caffeine
   include chrome
   include dropbox
-  include emacs
+  include emacs::formacosx
   include iterm2::dev
   include remove-spotlight
   include skype
@@ -74,13 +74,7 @@ class people::bradleywright {
 
   file { "${my_home}/.local_zshenv":
     mode    => '0644',
-    content => "[[ -f ${boxen::config::boxen_home}/env.sh ]] && . ${boxen::config::boxen_home}/env.sh
-
-if [ -d /Applications/Emacs.app ]; then
-    path=(/Applications/Emacs.app/Contents/MacOS/bin \$path)
-    alias emacs=/Applications/Emacs.app/Contents/MacOS/Emacs-10.7
-fi
-"
+    content => "[[ -f ${boxen::config::boxen_home}/env.sh ]] && . ${boxen::config::boxen_home}/env.sh"
   }
 
   file { "${my_home}/.localgitconfig":
