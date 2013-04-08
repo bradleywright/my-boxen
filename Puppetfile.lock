@@ -104,11 +104,22 @@ GITHUBTARBALL
     inifile (0.9.0)
 
 GITHUBTARBALL
+  remote: dieterdemeyer/puppet-adium
+  specs:
+    adium (1.1.0)
+
+GITHUBTARBALL
+  remote: fromonesrc/puppet-slate
+  specs:
+    slate (1.0.1)
+
+GITHUBTARBALL
   remote: puppetlabs/puppetlabs-stdlib
   specs:
     stdlib (3.0.0)
 
 DEPENDENCIES
+  adium (= 1.1.0)
   alfred (= 1.0.1)
   boxen (= 1.0.2)
   caffeine (= 1.0.0)
@@ -128,6 +139,7 @@ DEPENDENCIES
   osx (= 1.0.0)
   ruby (= 3.3.1)
   skype (= 1.0.2)
+  slate (= 1.0.1)
   stdlib (= 3.0.0)
   sudo (= 1.0.0)
   zsh (= 1.0.0)

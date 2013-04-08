@@ -37,6 +37,7 @@ github "sudo",     "1.0.0"
 # Optional/custom modules. There are tons available at
 # https://github.com/boxen.
 
+github "adium",    "1.1.0", :repo => "dieterdemeyer/puppet-adium"
 github "alfred",   "1.0.1"
 github "caffeine", "1.0.0"
 github "chrome",   "1.1.0"
@@ -45,4 +46,5 @@ github "emacs",    "1.1.4", :repo => "bradleywright/puppet-emacs"
 github "iterm2",   "1.0.1"
 github "osx",      "1.0.0"
 github "skype",    "1.0.2"
+github "slate",    "1.0.1", :repo => "fromonesrc/puppet-slate"
 github "zsh",      "1.0.0"
