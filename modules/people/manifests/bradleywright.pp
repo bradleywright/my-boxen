@@ -12,6 +12,13 @@ class people::bradleywright {
   include turn-off-dashboard
   include zsh
 
+  # OSX hacks
+  include osx::global::disable_key_press_and_hold
+  include osx::global::enable_keyboard_control_access
+  include osx::dock::autohide
+  include osx::finder::unhide_library
+  include osx::no_network_dsstores
+
   $my_home  = "/Users/${::luser}"
   $projects = "${my_home}/Projects"
 
