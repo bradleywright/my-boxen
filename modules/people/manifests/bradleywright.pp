@@ -18,6 +18,9 @@ class people::bradleywright {
   include osx::dock::autohide
   include osx::finder::unhide_library
   include osx::no_network_dsstores
+  class { 'osx::global::key_repeat_delay':
+    delay => 0
+  }
 
   $my_home  = "/Users/${::luser}"
   $projects = "${my_home}/Projects"
