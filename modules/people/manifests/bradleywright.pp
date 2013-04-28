@@ -14,7 +14,6 @@ class people::bradleywright {
 
   # OSX hacks
   include osx::disable_app_quarantine
-  include osx::dock::2d
   include osx::dock::autohide
   include osx::finder::unhide_library
   include osx::global::disable_key_press_and_hold
