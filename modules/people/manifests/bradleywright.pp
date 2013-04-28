@@ -19,7 +19,7 @@ class people::bradleywright {
   include osx::finder::unhide_library
   include osx::no_network_dsstores
   class { 'osx::global::key_repeat_delay':
-    delay => 0
+    delay => 100
   }
 
   $my_home  = "/Users/${::luser}"
