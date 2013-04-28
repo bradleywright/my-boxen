@@ -13,14 +13,15 @@ class people::bradleywright {
   include zsh
 
   # OSX hacks
-  include osx::global::disable_key_press_and_hold
-  include osx::global::enable_keyboard_control_access
+  include osx::disable_app_quarantine
+  include osx::dock::2d
   include osx::dock::autohide
   include osx::finder::unhide_library
-  include osx::no_network_dsstores
-  include osx::disable_app_quarantine
+  include osx::global::disable_key_press_and_hold
+  include osx::global::enable_keyboard_control_access
   include osx::global::expand_save_dialog
-  include osx::dock::2d
+  include osx::no_network_dsstores
+
   class { 'osx::global::key_repeat_delay':
     delay => 100
   }
