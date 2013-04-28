@@ -68,6 +68,7 @@ class people::bradleywright {
      'bash-completion',
      'coreutils',
      'gnu-typist',
+     'python',
      'reattach-to-user-namespace',
      'tmux',
      'tree',
