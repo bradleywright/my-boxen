@@ -26,6 +26,13 @@ class people::bradleywright {
     delay => 100
   }
 
+  boxen::osx_defaults { 'Disable reopen windows when logging back in':
+    key    => 'TALLogoutSavesState',
+    domain => 'com.apple.loginwindow',
+    value  => 'false',
+    user   => $::boxen_user,
+  }
+
   $my_home  = "/Users/${::luser}"
   $projects = "${my_home}/Projects"
 
