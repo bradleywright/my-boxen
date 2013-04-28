@@ -18,6 +18,9 @@ class people::bradleywright {
   include osx::dock::autohide
   include osx::finder::unhide_library
   include osx::no_network_dsstores
+  include osx::disable_app_quarantine
+  include osx::global::expand_save_dialog
+  include osx::dock::2d
   class { 'osx::global::key_repeat_delay':
     delay => 100
   }
