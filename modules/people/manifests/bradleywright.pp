@@ -6,6 +6,7 @@ class people::bradleywright {
   include dropbox
   include emacs::formacosx
   include iterm2::dev
+  include omnifocus
   include remove-spotlight
   include skype
   include slate
