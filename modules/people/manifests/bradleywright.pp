@@ -11,6 +11,7 @@ class people::bradleywright {
   include skype
   include slate
   include turn-off-dashboard
+  include vagrant
   include zsh
 
   # OSX hacks
