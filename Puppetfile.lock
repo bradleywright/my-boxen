@@ -1,10 +1,3 @@
-GIT
-  remote: https://github.com/bradleywright/puppet-git
-  ref: fix-git-options
-  sha: 8fda879326e251ecc148267b61d13ed2b2af6852
-  specs:
-    git (0.0.1)
-
 GITHUBTARBALL
   remote: boxen/puppet-alfred
   specs:
@@ -44,6 +37,11 @@ GITHUBTARBALL
   remote: boxen/puppet-gcc
   specs:
     gcc (1.0.0)
+
+GITHUBTARBALL
+  remote: boxen/puppet-git
+  specs:
+    git (1.2.3)
 
 GITHUBTARBALL
   remote: boxen/puppet-homebrew
@@ -141,7 +139,7 @@ DEPENDENCIES
   emacs (= 1.1.4)
   flux (= 0.0.1)
   gcc (= 1.0.0)
-  git (>= 0)
+  git (= 1.2.3)
   homebrew (= 1.1.2)
   hub (= 1.0.0)
   inifile (= 0.9.0)
