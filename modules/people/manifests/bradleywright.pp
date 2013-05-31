@@ -97,7 +97,10 @@ class people::bradleywright {
 
   file { "${my_home}/.local_zshenv":
     mode    => '0644',
-    content => "[[ -f ${boxen::config::boxen_home}/env.sh ]] && . ${boxen::config::boxen_home}/env.sh"
+    content => "[[ -f ${boxen::config::boxen_home}/env.sh ]] && . ${boxen::config::boxen_home}/env.sh
+
+[[ -d ${boxen::config::boxen_home}/homebrew/share/python ]] && path=(\$path ${boxen::config::boxen_home}/homebrew/share/python)
+"
   }
 
   file { "${my_home}/.localgitconfig":
