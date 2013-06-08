@@ -105,11 +105,11 @@ unalias git',
 "
   }
 
-  file { "${my_home}/.localgitconfig":
-    mode    => '0644',
-    content => "[user]
-    email = brad@intranation.com
-[credential]
-    helper = osxkeychain",
+  git::config::global { 'user.email':
+    value => 'brad@intranation.com',
+  }
+
+  git::config::global { 'include.path':
+    value => "${my_home}/.local_gitconfig",
   }
 }
