@@ -24,7 +24,11 @@ class people::bradleywright {
   include osx::no_network_dsstores
 
   class { 'osx::global::key_repeat_delay':
-    delay => 300
+    delay => 200
+  }
+
+  class { 'osx::global::key_repeat_rate':
+    rate => 400
   }
 
   boxen::osx_defaults { 'Disable reopen windows when logging back in':
