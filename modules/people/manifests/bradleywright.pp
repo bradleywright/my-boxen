@@ -5,6 +5,7 @@ class people::bradleywright {
   include chrome
   include dropbox
   include emacs::formacosx
+  include emacs-keybindings
   include iterm2::dev
   include omnifocus
   include remove-spotlight
