@@ -124,4 +124,9 @@ unalias git',
     ensure => "1.8.3.4"
   }
 
+  # Use my own Git config, thanks.
+  Git::Config::Global <| title == "core.excludesfile" |> {
+    value => "~/.gitignore"
+  }
+
 }
