@@ -4,6 +4,11 @@ GITHUBTARBALL
     alfred (1.0.2)
 
 GITHUBTARBALL
+  remote: boxen/puppet-autoconf
+  specs:
+    autoconf (1.0.0)
+
+GITHUBTARBALL
   remote: boxen/puppet-boxen
   specs:
     boxen (3.0.1)
@@ -66,12 +71,12 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-nodejs
   specs:
-    nodejs (1.0.0)
+    nodejs (3.2.9)
 
 GITHUBTARBALL
-  remote: boxen/puppet-nvm
+  remote: boxen/puppet-openssl
   specs:
-    nvm (1.0.0)
+    openssl (1.0.0)
 
 GITHUBTARBALL
   remote: boxen/puppet-osx
@@ -104,6 +109,11 @@ GITHUBTARBALL
     vagrant (2.0.7)
 
 GITHUBTARBALL
+  remote: boxen/puppet-xquartz
+  specs:
+    xquartz (1.1.0)
+
+GITHUBTARBALL
   remote: boxen/puppet-zsh
   specs:
     zsh (1.0.0)
@@ -119,9 +129,9 @@ GITHUBTARBALL
     emacs-keybindings (1.0.0)
 
 GITHUBTARBALL
-  remote: cprice-puppet/puppetlabs-inifile
+  remote: bradleywright/puppet-stay
   specs:
-    inifile (0.9.0)
+    stay (1.0.0)
 
 GITHUBTARBALL
   remote: dieterdemeyer/puppet-adium
@@ -129,18 +139,19 @@ GITHUBTARBALL
     adium (1.1.0)
 
 GITHUBTARBALL
-  remote: fromonesrc/puppet-slate
+  remote: puppetlabs/puppetlabs-inifile
   specs:
-    slate (1.0.1)
+    inifile (1.0.0)
 
 GITHUBTARBALL
   remote: puppetlabs/puppetlabs-stdlib
   specs:
-    stdlib (3.0.0)
+    stdlib (4.1.0)
 
 DEPENDENCIES
   adium (= 1.1.0)
   alfred (= 1.0.2)
+  autoconf (= 1.0.0)
   boxen (= 3.0.1)
   caffeine (= 1.0.0)
   chrome (= 1.1.1)
@@ -153,18 +164,19 @@ DEPENDENCIES
   git (= 1.2.5)
   homebrew (= 1.4.1)
   hub (= 1.0.3)
-  inifile (= 0.9.0)
+  inifile (= 1.0.0)
   iterm2 (= 1.0.2)
   nginx (= 1.4.2)
-  nodejs (= 1.0.0)
-  nvm (= 1.0.0)
+  nodejs (= 3.2.9)
+  openssl (= 1.0.0)
   osx (= 1.3.0)
   repository (= 2.2.0)
   ruby (= 6.3.0)
   skype (= 1.0.2)
-  slate (= 1.0.1)
-  stdlib (= 3.0.0)
+  stay (= 1.0.0)
+  stdlib (= 4.1.0)
   sudo (= 1.0.0)
   vagrant (= 2.0.7)
+  xquartz (= 1.1.0)
   zsh (= 1.0.0)
 
