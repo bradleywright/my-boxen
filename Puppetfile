@@ -37,8 +37,8 @@ github "xquartz",    "1.1.0"
 # Optional/custom modules. There are tons available at
 # https://github.com/boxen.
 
-github "adium",    "1.1.0", :repo => "dieterdemeyer/puppet-adium"
-github "alfred",   "1.0.2"
+github "adium",    "1.1.1", :repo => "dieterdemeyer/puppet-adium"
+github "alfred",   "1.1.2"
 github "caffeine", "1.0.0"
 github "chrome",   "1.1.1"
 github "dropbox",  "1.1.0"
