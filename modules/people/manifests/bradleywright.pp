@@ -39,7 +39,7 @@ class people::bradleywright {
     user   => $::boxen_user,
   }
 
-  $my_home  = "/Users/${::luser}"
+  $my_home  = "/Users/${::boxen_user}"
   $projects = "${my_home}/Projects"
 
   file { $projects:
