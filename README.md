@@ -1,3 +1,11 @@
+# For future Brad:
+
+Install it like this:
+
+```shell
+./script/boxen --srcdir=/Users/${USER}/Projects
+```
+
 # Our Boxen
 
 This is a template Boxen project designed for your organization to fork and
