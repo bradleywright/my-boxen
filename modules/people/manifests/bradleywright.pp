@@ -92,10 +92,10 @@ class people::bradleywright {
 
   file { "${my_home}/.local_zshrc":
     mode    => '0644',
-    content => 'cdpath=(${::boxen_srcdir} ~)
+    content => "cdpath=(${::boxen_srcdir} ~)
 
 # Do not want hub clobbering git
-unalias git',
+unalias git",
   }
 
   file { "${my_home}/.local_zshenv":
