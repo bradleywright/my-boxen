@@ -40,17 +40,12 @@ class people::bradleywright {
   }
 
   $my_home  = "/Users/${::boxen_user}"
-  $projects = "${my_home}/Projects"
 
-  file { $projects:
-    ensure => directory,
-  }
-
-  $dotfiles = "${projects}/dotfiles"
+  $dotfiles = "${::boxen_srcdir}/dotfiles"
 
   repository { $dotfiles:
     source  => 'bradleywright/dotfiles',
-    require => File[$projects],
+    require => File[$::boxen_srcdir],
     notify  => Exec['bradleywright-make-dotfiles'],
   }
 
@@ -59,11 +54,11 @@ class people::bradleywright {
     refreshonly => true,
   }
 
-  $emacs = "${projects}/emacs-d"
+  $emacs = "${::boxen_srcdir}/emacs-d"
 
   repository { $emacs:
     source  => 'bradleywright/emacs-d',
-    require => File[$projects],
+    require => File[$::boxen_srcdir],
     notify  => Exec['bradleywright-make-emacs-d'],
   }
 
@@ -97,7 +92,7 @@ class people::bradleywright {
 
   file { "${my_home}/.local_zshrc":
     mode    => '0644',
-    content => 'cdpath=(~/Projects ~)
+    content => 'cdpath=(${::boxen_srcdir} ~)
 
 # Do not want hub clobbering git
 unalias git',
