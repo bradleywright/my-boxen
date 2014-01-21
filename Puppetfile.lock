@@ -106,7 +106,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-ruby
   specs:
-    ruby (6.7.2)
+    ruby (6.9.0)
 
 GITHUBTARBALL
   remote: boxen/puppet-skype
@@ -195,7 +195,7 @@ DEPENDENCIES
   phantomjs (= 2.0.2)
   pkgconfig (= 1.0.0)
   repository (= 2.2.0)
-  ruby (= 6.7.2)
+  ruby (= 6.9.0)
   skype (= 1.0.2)
   stay (= 1.0.0)
   stdlib (= 4.1.0)
