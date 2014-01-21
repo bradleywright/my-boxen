@@ -114,11 +114,6 @@ unalias git',
     value => "${my_home}/.local_gitconfig",
   }
 
-  # Clobber boxen version of Git to use stock homebrew
-  Package <| title == "boxen/brews/git" |> {
-    ensure => "1.8.3.4"
-  }
-
   # Use my own Git config, thanks.
   Git::Config::Global <| title == "core.excludesfile" |> {
     value => "~/.gitignore"
