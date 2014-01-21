@@ -4,7 +4,7 @@ class people::bradleywright {
   include caffeine
   include chrome
   include dropbox
-  include emacs::formacosx
+  include emacs::head
   include emacs-keybindings
   include iterm2::dev
   include omnifocus
