@@ -139,11 +139,6 @@ GITHUBTARBALL
     zsh (1.0.0)
 
 GITHUBTARBALL
-  remote: bradleywright/puppet-emacs
-  specs:
-    emacs (1.1.6)
-
-GITHUBTARBALL
   remote: bradleywright/puppet-emacs-keybindings
   specs:
     emacs_keybindings (2.0.0)
@@ -186,7 +181,6 @@ DEPENDENCIES
   chrome (= 1.1.1)
   dnsmasq (= 1.0.1)
   dropbox (= 1.1.0)
-  emacs (= 1.1.6)
   emacs_keybindings (= 2.0.0)
   flux (= 0.0.1)
   foreman (= 1.2.0)
