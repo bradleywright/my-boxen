@@ -4,13 +4,12 @@ class people::bradleywright {
   include caffeine
   include chrome
   include dropbox
-  include emacs::head
   include emacs-keybindings
   include iterm2::dev
   include omnifocus
-  include remove-spotlight
+  include remove_spotlight
   include skype
-  include turn-off-dashboard
+  include turn_off_dashboard
   include vagrant
   include zsh
 
