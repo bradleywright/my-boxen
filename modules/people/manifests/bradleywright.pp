@@ -21,6 +21,7 @@ class people::bradleywright {
   include osx::global::disable_key_press_and_hold
   include osx::global::enable_keyboard_control_access
   include osx::global::expand_save_dialog
+  include osx::keyboard::capslock_to_control
   include osx::no_network_dsstores
 
   class { 'osx::global::key_repeat_delay':
