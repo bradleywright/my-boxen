@@ -118,4 +118,21 @@ unalias git",
     value => "~/.gitignore"
   }
 
+
+  # Keyboard hacks
+  include keyremap4macbook
+  include keyremap4macbook::login_item
+
+  # Tap Ctrl_l for <esc>, hold for <ctrl>
+  keyremap4macbook::remap{ 'controlL2controlL_escape': }
+  keyremap4macbook::set{ 'parameter.keyoverlaidmodifier_timeout':
+    value => '300'
+  }
+
+  keyremap4macbook::private_xml{ 'private.xml':
+    source => 'puppet:///modules/people/bradleywright/private.xml'
+  }
+
+  keyremap4macbook::remap{ 'space_cadet.force_correct_shifts': }
+
 }
