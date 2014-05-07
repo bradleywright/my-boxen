@@ -146,7 +146,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: bradleywright/puppet-emacs-keybindings
   specs:
-    emacs-keybindings (1.0.0)
+    emacs_keybindings (2.0.0)
 
 GITHUBTARBALL
   remote: bradleywright/puppet-stay
@@ -187,7 +187,7 @@ DEPENDENCIES
   dnsmasq (= 1.0.1)
   dropbox (= 1.1.0)
   emacs (= 1.1.6)
-  emacs-keybindings (= 1.0.0)
+  emacs_keybindings (= 2.0.0)
   flux (= 0.0.1)
   foreman (= 1.2.0)
   gcc (= 2.0.100)

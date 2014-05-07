@@ -4,7 +4,7 @@ class people::bradleywright {
   include caffeine
   include chrome
   include dropbox
-  include emacs-keybindings
+  include emacs_keybindings
   include iterm2::dev
   include omnifocus
   include remove_spotlight
