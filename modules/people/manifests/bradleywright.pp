@@ -10,7 +10,6 @@ class people::bradleywright {
   include omnifocus
   include remove-spotlight
   include skype
-  include stay
   include turn-off-dashboard
   include vagrant
   include zsh
