@@ -134,6 +134,11 @@ unalias git",
   }
 
   keyremap4macbook::remap{ 'space_cadet.force_correct_shifts': }
+  keyremap4macbook::remap{ 'space_cadet.force_correct_commands': }
+
+  include pckeyboardhack
+  # add pckeyboardhack to login items
+  include pckeyboardhack::login_item
 
   # Emacs
   package { 'Emacs':
