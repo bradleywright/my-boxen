@@ -143,7 +143,7 @@ unalias git",
   # Emacs
   package { 'Emacs':
     provider => 'appdmg',
-    source   => 'http://emacsformacosx.com/emacs-builds/Emacs-pretest-24.3.90-universal-10.6.8.dmg',
+    source   => 'http://emacsformacosx.com/emacs-builds/Emacs-pretest-24.3.91-universal-10.6.8.dmg',
     notify   => Exec['fix-emacs-termcap'],
   }
 
