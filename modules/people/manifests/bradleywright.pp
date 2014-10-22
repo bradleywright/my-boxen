@@ -118,21 +118,21 @@ unalias git",
 
 
   # Keyboard hacks
-  include keyremap4macbook
-  include keyremap4macbook::login_item
+  include karabiner
+  include karabiner::login_item
 
   # Tap Ctrl_l for <esc>, hold for <ctrl>
-  keyremap4macbook::remap{ 'controlL2controlL_escape': }
-  keyremap4macbook::set{ 'parameter.keyoverlaidmodifier_timeout':
+  karabiner::remap{ 'controlL2controlL_escape': }
+  karabiner::set{ 'parameter.keyoverlaidmodifier_timeout':
     value => '300'
   }
 
-  keyremap4macbook::private_xml{ 'private.xml':
+  karabiner::private_xml{ 'private.xml':
     source => 'puppet:///modules/people/bradleywright/private.xml'
   }
 
-  keyremap4macbook::remap{ 'space_cadet.force_correct_shifts': }
-  keyremap4macbook::remap{ 'space_cadet.force_correct_commands': }
+  karabiner::remap{ 'space_cadet.force_correct_shifts': }
+  karabiner::remap{ 'space_cadet.force_correct_commands': }
 
   include pckeyboardhack
   # add pckeyboardhack to login items
