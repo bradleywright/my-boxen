@@ -6,6 +6,7 @@ class people::bradleywright {
   include dropbox
   include emacs_keybindings
   include iterm2::dev
+  include iterm2::colors::solarized_dark
   include omnifocus
   include skype
   include turn_off_dashboard
