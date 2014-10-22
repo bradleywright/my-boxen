@@ -181,15 +181,13 @@ GITHUBTARBALL
 DEPENDENCIES
   adium (= 1.1.1)
   alfred (= 1.1.2)
-  boxen (= 3.4.2)
+  boxen (= 3.7.0)
   caffeine (= 1.0.0)
   chrome (= 1.1.1)
-  dnsmasq (= 1.0.1)
+  dnsmasq (= 2.0.0)
   dropbox (= 1.1.0)
   emacs_keybindings (= 2.0.0)
   flux (= 0.0.1)
-  boxen (= 3.7.0)
-  dnsmasq (= 2.0.0)
   foreman (= 1.2.0)
   gcc (= 2.2.0)
   git (= 2.5.0)
@@ -217,3 +215,4 @@ DEPENDENCIES
   vagrant (= 2.0.7)
   xquartz (= 1.2.1)
   zsh (= 1.0.0)
+
