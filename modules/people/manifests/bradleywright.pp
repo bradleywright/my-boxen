@@ -7,7 +7,6 @@ class people::bradleywright {
   include emacs_keybindings
   include iterm2::dev
   include omnifocus
-  include remove_spotlight
   include skype
   include turn_off_dashboard
   include vagrant
