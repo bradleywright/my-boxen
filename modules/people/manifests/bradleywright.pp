@@ -68,7 +68,7 @@ class people::bradleywright {
 
   file { "${my_home}/.emacs.d/local/${::hostname}.el":
     mode    => '0644',
-    content => "(exec-path-from-shell-copy-envs '(\"BOXEN_NVM_DIR\" \"BOXEN_NVM_DEFAULT_VERSION\"))
+    content => "(exec-path-from-shell-copy-envs '(\"BOXEN_NVM_DIR\" \"BOXEN_NVM_DEFAULT_VERSION\" \"GOPATH\"))
 ",
     require => Repository[$emacs],
   }
