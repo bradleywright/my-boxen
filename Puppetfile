@@ -69,7 +69,7 @@ github "emacs_keybindings",    "2.0.0", :repo => "bradleywright/puppet-emacs-key
 github "flux",     "1.0.1"
 github "iterm2",   "1.2.2"
 github "karabiner", "1.0.6"
-github "omnifocus","1.0.1", :repo => "fromonesrc/puppet-omnifocus"
+github "omnifocus","1.1.0"
 github "osx",      "2.7.1"
 github "pckeyboardhack", "1.2.2"
 github "skype",    "1.0.9"
