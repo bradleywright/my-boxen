@@ -20,7 +20,6 @@ class people::bradleywright {
   include osx::global::disable_key_press_and_hold
   include osx::global::enable_keyboard_control_access
   include osx::global::expand_save_dialog
-  include osx::keyboard::capslock_to_control
   include osx::no_network_dsstores
 
   class { 'osx::global::key_repeat_delay':
@@ -135,9 +134,13 @@ unalias git",
 
   karabiner::remap{ 'space_cadet.force_correct_shifts': }
   karabiner::remap{ 'space_cadet.force_correct_commands': }
+  karabiner::remap{ 'private.f19_escape_control_v2': }
 
   include seil
   include seil::login_item
+
+  # FIXME: script mapping Capslock to 'no action'
+  seil::map { 'capslock': value => 80 }
 
   # Emacs
   package { 'Emacs':
