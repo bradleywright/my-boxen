@@ -99,11 +99,6 @@ GITHUBTARBALL
     osx (2.7.1)
 
 GITHUBTARBALL
-  remote: boxen/puppet-pckeyboardhack
-  specs:
-    pckeyboardhack (1.2.2)
-
-GITHUBTARBALL
   remote: boxen/puppet-phantomjs
   specs:
     phantomjs (2.3.0)
@@ -122,6 +117,11 @@ GITHUBTARBALL
   remote: boxen/puppet-ruby
   specs:
     ruby (8.1.4)
+
+GITHUBTARBALL
+  remote: boxen/puppet-seil
+  specs:
+    seil (1.0.2)
 
 GITHUBTARBALL
   remote: boxen/puppet-skype
@@ -203,11 +203,11 @@ DEPENDENCIES
   omnifocus (= 1.1.0)
   openssl (= 1.0.0)
   osx (= 2.7.1)
-  pckeyboardhack (= 1.2.2)
   phantomjs (= 2.3.0)
   pkgconfig (= 1.0.0)
   repository (= 2.3.0)
   ruby (= 8.1.4)
+  seil (= 1.0.2)
   skype (= 1.0.9)
   stay (= 1.0.0)
   stdlib (= 4.2.1)

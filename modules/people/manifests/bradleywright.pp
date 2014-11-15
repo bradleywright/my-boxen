@@ -136,9 +136,8 @@ unalias git",
   karabiner::remap{ 'space_cadet.force_correct_shifts': }
   karabiner::remap{ 'space_cadet.force_correct_commands': }
 
-  include pckeyboardhack
-  # add pckeyboardhack to login items
-  include pckeyboardhack::login_item
+  include seil
+  include seil::login_item
 
   # Emacs
   package { 'Emacs':
