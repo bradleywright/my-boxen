@@ -3,6 +3,11 @@ class people::bradleywright {
 
   $my_home  = "/Users/${::boxen_user}"
 
+  file { "${::boxen_srcdir}/boxen":
+    ensure => 'link',
+    target => "${::boxen_home}/repo"
+  }
+
   $dotfiles = "${::boxen_srcdir}/dotfiles"
 
   repository { $dotfiles:
