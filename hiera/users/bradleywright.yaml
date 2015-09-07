@@ -1,4 +1,5 @@
 ---
+boxen::config::srcdir: "/Users/%{::boxen_user}/Projects"
 boxen::personal::homebrew_packages:
   - coreutils
   - python
