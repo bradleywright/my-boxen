@@ -14,4 +14,17 @@ class people::bradleywright {
     content => "[[ -f ${boxen::config::boxen_home}/env.sh ]] && . ${boxen::config::boxen_home}/env.sh
 "
   }
+
+  git::config::global { 'user.email':
+    value => 'brad@intranation.com',
+  }
+
+  git::config::global { 'include.path':
+    value => "${my_home}/.local_gitconfig",
+  }
+
+  # Use my own Git config, thanks.
+  Git::Config::Global <| title == "core.excludesfile" |> {
+    value => "~/.gitignore"
+  }
 }
