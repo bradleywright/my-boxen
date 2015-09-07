@@ -3,6 +3,30 @@ class people::bradleywright {
 
   $my_home  = "/Users/${::boxen_user}"
 
+  $dotfiles = "${::boxen_srcdir}/dotfiles"
+
+  repository { $dotfiles:
+    source  => 'bradleywright/dotfiles',
+    notify  => Exec['bradleywright-make-dotfiles'],
+  }
+
+  exec { 'bradleywright-make-dotfiles':
+    command     => "cd ${dotfiles} && make",
+    refreshonly => true,
+  }
+
+  $emacs = "${::boxen_srcdir}/emacs.d"
+
+  repository { $emacs:
+    source  => 'bradleywright/emacs.d',
+    notify  => Exec['bradleywright-make-emacs-d'],
+  }
+
+  exec { 'bradleywright-make-emacs-d':
+    command     => "cd ${emacs} && make",
+    refreshonly => true,
+  }
+
   file { "${my_home}/.local_zshrc":
     mode    => '0644',
     content => "cdpath=(${::boxen_srcdir} ~)
