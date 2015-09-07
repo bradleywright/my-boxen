@@ -1,0 +1,4 @@
+---
+boxen::personal::homebrew_packages:
+  - zsh-completions
+  - zsh-lovers
