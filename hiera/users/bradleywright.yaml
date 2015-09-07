@@ -2,3 +2,5 @@
 boxen::personal::homebrew_packages:
   - zsh-completions
   - zsh-lovers
+boxen::security::require_password: true
+boxen::security::screensaver_delay_sec: "0"
