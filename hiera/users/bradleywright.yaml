@@ -1,5 +1,11 @@
 ---
 boxen::personal::homebrew_packages:
+  - coreutils
+  - python
+  - reattach-to-user-namespace
+  - the_silver_searcher
+  - tmux
+  - wget
   - zsh-completions
   - zsh-lovers
 boxen::security::require_password: true
