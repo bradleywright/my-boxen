@@ -56,4 +56,28 @@ class people::bradleywright {
   Git::Config::Global <| title == "core.excludesfile" |> {
     value => "~/.gitignore"
   }
+
+  # OSX Emacs fixes
+  package { 'Emacs':
+    provider => 'appdmg',
+    source   => 'http://emacsformacosx.com/emacs-builds/Emacs-24.5-1-universal.dmg',
+    notify   => Exec['fix-emacs-termcap'],
+  }
+
+  file { "${boxen::config::envdir}/emacs-macosx.sh":
+    content => "export PATH=/Applications/Emacs.app/Contents/MacOS/bin:\$PATH
+alias emacs=/Applications/Emacs.app/Contents/MacOS/Emacs
+",
+    require => File[$boxen::config::envdir],
+  }
+
+  # So ansi-term behaves itself: http://stackoverflow.com/a/8920373
+  exec { 'fix-emacs-termcap':
+    command     => 'tic -o \
+      ~/.terminfo \
+      /Applications/Emacs.app/Contents/Resources/etc/e/eterm-color.ti',
+    provider    => shell,
+    refreshonly => true,
+  }
+
 }
