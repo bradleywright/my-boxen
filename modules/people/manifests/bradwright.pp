@@ -1,4 +1,4 @@
-class people::bradleywright {
+class people::bradwright {
   include zsh
 
   $my_home  = "/Users/${::boxen_user}"
@@ -11,11 +11,11 @@ class people::bradleywright {
   $dotfiles = "${::boxen_srcdir}/dotfiles"
 
   repository { $dotfiles:
-    source  => 'bradleywright/dotfiles',
-    notify  => Exec['bradleywright-make-dotfiles'],
+    source  => 'bradwright/dotfiles',
+    notify  => Exec['bradwright-make-dotfiles'],
   }
 
-  exec { 'bradleywright-make-dotfiles':
+  exec { 'bradwright-make-dotfiles':
     command     => "cd ${dotfiles} && make",
     refreshonly => true,
   }
@@ -23,11 +23,11 @@ class people::bradleywright {
   $emacs = "${::boxen_srcdir}/emacs.d"
 
   repository { $emacs:
-    source  => 'bradleywright/emacs.d',
-    notify  => Exec['bradleywright-make-emacs-d'],
+    source  => 'bradwright/emacs.d',
+    notify  => Exec['bradwright-make-emacs-d'],
   }
 
-  exec { 'bradleywright-make-emacs-d':
+  exec { 'bradwright-make-emacs-d':
     command     => "cd ${emacs} && make",
     refreshonly => true,
   }
