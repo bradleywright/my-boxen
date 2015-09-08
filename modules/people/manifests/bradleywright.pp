@@ -54,7 +54,7 @@ class people::bradleywright {
 
   # Use my own Git config, thanks.
   Git::Config::Global <| title == "core.excludesfile" |> {
-    value => "~/.gitignore"
+    value => '~/.gitignore'
   }
 
   # OSX Emacs fixes
@@ -65,9 +65,9 @@ class people::bradleywright {
   }
 
   file { "${boxen::config::envdir}/emacs-macosx.sh":
-    content => "export PATH=/Applications/Emacs.app/Contents/MacOS/bin:\$PATH
+    content => 'export PATH=/Applications/Emacs.app/Contents/MacOS/bin:$PATH
 alias emacs=/Applications/Emacs.app/Contents/MacOS/Emacs
-",
+',
     require => File[$boxen::config::envdir],
   }
 
@@ -83,6 +83,6 @@ alias emacs=/Applications/Emacs.app/Contents/MacOS/Emacs
   # Omnifocus
   package { 'OmniFocus':
     provider => 'appdmg_eula',
-    source   => "http://www.omnigroup.com/ftp1/pub/software/MacOSX/10.10/OmniFocus-2.2.5.dmg"
+    source   => 'http://www.omnigroup.com/ftp1/pub/software/MacOSX/10.10/OmniFocus-2.2.5.dmg'
   }
 }
