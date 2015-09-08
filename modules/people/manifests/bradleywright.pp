@@ -80,4 +80,9 @@ alias emacs=/Applications/Emacs.app/Contents/MacOS/Emacs
     refreshonly => true,
   }
 
+  # Omnifocus
+  package { 'OmniFocus':
+    provider => 'appdmg_eula',
+    source   => "http://www.omnigroup.com/ftp1/pub/software/MacOSX/10.10/OmniFocus-2.2.5.dmg"
+  }
 }
