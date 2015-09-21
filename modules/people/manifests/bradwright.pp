@@ -1,6 +1,14 @@
 class people::bradwright {
   include zsh
 
+  class { 'osx::global::key_repeat_delay':
+    delay => 200
+  }
+
+  class { 'osx::global::key_repeat_rate':
+    rate => 200
+  }
+
   $my_home  = "/Users/${::boxen_user}"
 
   $dotfiles = "${::boxen_srcdir}/dotfiles"
