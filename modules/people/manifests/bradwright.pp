@@ -88,4 +88,18 @@ alias emacs=/Applications/Emacs.app/Contents/MacOS/Emacs
     provider => 'appdmg_eula',
     source   => 'http://www.omnigroup.com/ftp1/pub/software/MacOSX/10.10/OmniFocus-2.2.5.dmg'
   }
+
+   # Go
+  package { 'go':
+    ensure   => latest,
+    provider => homebrew
+  } ~> Exec['install_go_tools']
+
+  exec { 'install_go_tools':
+    environment => ["GOPATH=${my_home}/go"],
+    command     => 'go get golang.org/x/tools/cmd/godoc \
+                    && go get golang.org/x/tools/cmd/vet \
+                    && go get github.com/nsf/gocode \
+                    && go get github.com/rogpeppe/godef'
+  }
 }
