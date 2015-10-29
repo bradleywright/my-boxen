@@ -38,16 +38,12 @@ class people::bradwright {
   file { "${my_home}/.local_zshrc":
     mode    => '0644',
     content => "cdpath=(${::boxen_srcdir} ~)
-
-setopt global_rcs
 "
   }
 
   file { "${my_home}/.local_zshenv":
     mode    => '0644',
-    content => "setopt no_global_rcs
-
-[[ -f ${boxen::config::boxen_home}/env.sh ]] && . ${boxen::config::boxen_home}/env.sh
+    content => "[[ -f ${boxen::config::boxen_home}/env.sh ]] && . ${boxen::config::boxen_home}/env.sh
 "
   }
 
