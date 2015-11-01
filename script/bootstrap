@@ -59,7 +59,9 @@ set -e
     /usr/bin/sudo -p "Password for sudo to install bundler: " \
         /usr/bin/gem install bundler -v '~> 1.5.3' --no-rdoc --no-ri
 }
-PATH="/Library/Ruby/bin:$PATH"
+# FIXME: /Library/Ruby/bin doesn't exist, and this seems to be where El Capitan
+# puts its Gem executables
+PATH="/Library/Ruby/Gems/2.0.0/gems/bundler-1.5.3/bin:$PATH"
 
 # Use checksums to quickly determine if we need to re-bundle
 
