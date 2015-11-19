@@ -1,4 +1,5 @@
 class people::bradwright {
+  include python
   include zsh
 
   # Null out El Capitan's zprofile so it doesn't break my path:
