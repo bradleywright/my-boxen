@@ -99,14 +99,17 @@ alias emacs=/Applications/Emacs.app/Contents/MacOS/Emacs
    # Go
   package { 'go':
     ensure   => latest,
-    provider => homebrew
-  } ~> Exec['install_go_tools']
+    provider => homebrew,
+    notify   => Exec['install_go_tools'],
+  }
 
   exec { 'install_go_tools':
     environment => ["GOPATH=${my_home}/go"],
     command     => 'go get golang.org/x/tools/cmd/godoc \
                     && go get golang.org/x/tools/cmd/vet \
                     && go get github.com/nsf/gocode \
-                    && go get github.com/rogpeppe/godef'
+                    && go get github.com/rogpeppe/godef',
+    provider    => shell,
+    refreshonly => true,
   }
 }
