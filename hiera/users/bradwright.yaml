@@ -9,5 +9,8 @@ boxen::personal::homebrew_packages:
   - wget
   - zsh-completions
   - zsh-lovers
+boxen::personal::includes:
+  - python
+  - zsh
 boxen::security::require_password: true
 boxen::security::screensaver_delay_sec: "0"

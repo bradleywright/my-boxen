@@ -1,7 +1,4 @@
 class people::bradwright {
-  include python
-  include zsh
-
   # Null out El Capitan's zprofile so it doesn't break my path:
   # http://www.zsh.org/mla/users/2015/msg00724.html
   file { '/etc/zprofile':
