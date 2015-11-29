@@ -93,7 +93,7 @@ alias emacs=/Applications/Emacs.app/Contents/MacOS/Emacs
     source   => 'http://www.omnigroup.com/ftp1/pub/software/MacOSX/10.10/OmniFocus-2.3.1.dmg'
   }
 
-   # Go
+  # Go
   package { 'go':
     ensure   => latest,
     provider => homebrew,
