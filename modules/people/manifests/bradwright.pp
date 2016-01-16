@@ -93,6 +93,20 @@ alias emacs=/Applications/Emacs.app/Contents/MacOS/Emacs
     source   => 'http://www.omnigroup.com/ftp1/pub/software/MacOSX/10.10/OmniFocus-2.3.1.dmg'
   }
 
+  # Dispatch x-message protocol handler
+  # http://www.dispatchapp.net/faq.html#openDispatchLinksOnMac
+  package { 'Dispatch URL Helper':
+    provider => 'appdmg',
+    source   => 'http://www.dispatchapp.net/downloads/DispatchURLHelper.dmg',
+    notify   => Exec['open_dispatch_helper_app'],
+  }
+
+  exec { 'open_dispatch_helper_app':
+    command     => 'open -a "Dispatch URL Helper"',
+    provider    => shell,
+    refreshonly => true,
+  }
+
   # Go
   package { 'go':
     ensure   => latest,
