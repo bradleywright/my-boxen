@@ -163,7 +163,11 @@ fi
 
 # Key bindings
 # ------------
-source \"${fzf_home}/shell/key-bindings.zsh\"",
+source \"${fzf_home}/shell/key-bindings.zsh\"
+
+# Because I use solarized-dark, force FZF to use 16 colours
+export FZF_DEFAULT_OPTS=\"--color 16\"
+",
     require     => File[$boxen::config::envdir],
   }
 }
