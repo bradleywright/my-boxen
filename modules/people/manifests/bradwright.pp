@@ -132,4 +132,38 @@ alias emacs=/Applications/Emacs.app/Contents/MacOS/Emacs
     target  => "${boxen::config::homebrewdir}/Library/Contributions/brew_zsh_completion.zsh",
     require => Class['zsh'],
   }
+
+  # FZF - fuzzy finder in shell
+  $fzf_env_config = "${boxen::config::envdir}/fzf.sh"
+  package { 'fzf':
+    ensure   => latest,
+    provider => homebrew,
+    before   => File[$fzf_env_config],
+  }
+
+  # This is what 'install' puts into your shell - put it in directly so I can
+  # avoid the interactive install
+  $fzf_home = "${boxen::config::boxen_home}/homebrew/opt/fzf"
+  file { "${fzf_env_config}":
+    content     => "# Setup fzf
+# ---------
+if [[ ! \"\$PATH\" == *${fzf_home}/bin* ]]; then
+  export PATH=\"\$PATH:${fzf_home}/bin\"
+fi
+
+# Man path
+# --------
+if [[ ! \"\$MANPATH\" == *${fzf_home}/man* && -d \"${fzf_home}/man\" ]]; then
+  export MANPATH=\"\$MANPATH:${fzf_home}/man\"
+fi
+
+# Auto-completion
+# ---------------
+[[ $- == *i* ]] && source \"${fzf_home}/shell/completion.zsh\" 2> /dev/null
+
+# Key bindings
+# ------------
+source \"${fzf_home}/shell/key-bindings.zsh\"",
+    require     => File[$boxen::config::envdir],
+  }
 }
