@@ -14,3 +14,5 @@ boxen::personal::includes:
   - zsh
 boxen::security::require_password: true
 boxen::security::screensaver_delay_sec: "0"
+ruby::build::ensure: 'v20160130'
+ruby::global::version: "2.2.4"

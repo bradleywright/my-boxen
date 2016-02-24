@@ -1,3 +1,1 @@
 ---
-ruby::build::ensure: 'v20160130'
-ruby::global::version: "2.2.4"
