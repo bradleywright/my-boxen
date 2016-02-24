@@ -125,4 +125,11 @@ alias emacs=/Applications/Emacs.app/Contents/MacOS/Emacs
     provider    => shell,
     refreshonly => true,
   }
+
+  # Install brew completion
+  file {"${boxen::config::homebrewdir}/share/zsh-completions/_brew":
+    ensure  => link,
+    target  => "${boxen::config::homebrewdir}/Library/Contributions/brew_zsh_completion.zsh",
+    require => Class['zsh'],
+  }
 }
