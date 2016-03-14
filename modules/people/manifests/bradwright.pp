@@ -143,7 +143,7 @@ alias emacs=/Applications/Emacs.app/Contents/MacOS/Emacs
 
   # This is what 'install' puts into your shell - put it in directly so I can
   # avoid the interactive install
-  $fzf_home = "${boxen::config::boxen_home}/homebrew/opt/fzf"
+  $fzf_home = "${boxen::config::homebrewdir}/opt/fzf"
   file { "${fzf_env_config}":
     content     => "# Setup fzf
 # ---------
