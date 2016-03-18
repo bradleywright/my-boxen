@@ -21,7 +21,7 @@ class people::bradwright {
 
   $my_home  = "/Users/${::boxen_user}"
 
-  $dotfiles = "${::boxen_srcdir}/dotfiles"
+  $dotfiles = "${boxen::config::srcdir}/dotfiles"
 
   repository { $dotfiles:
     source  => 'bradwright/dotfiles',
@@ -33,7 +33,7 @@ class people::bradwright {
     refreshonly => true,
   }
 
-  $emacs = "${::boxen_srcdir}/emacs.d"
+  $emacs = "${boxen::config::srcdir}/emacs.d"
 
   repository { $emacs:
     source  => 'bradwright/emacs.d',
@@ -47,7 +47,7 @@ class people::bradwright {
 
   file { "${my_home}/.local_zshrc":
     mode    => '0644',
-    content => "cdpath=(${::boxen_srcdir} ~)
+    content => "cdpath=(${boxen::config::srcdir} ~)
 "
   }
 
