@@ -15,5 +15,6 @@ boxen::personal::includes:
 boxen::security::require_password: true
 boxen::security::screensaver_delay_sec: "0"
 nodejs::build::ensure: '25461f150782cb0d1ad48df01637dccd5842a796'
+nodejs::global::version: '4.4.1'
 ruby::build::ensure: 'v20160130'
 ruby::global::version: "2.2.4"
