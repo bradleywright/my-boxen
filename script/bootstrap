@@ -53,16 +53,12 @@ fi
 set -e
 
 # FIX: only sudo if gem home isn't writable
-
-(/usr/bin/gem spec bundler -v '~> 1.5.3' >/dev/null 2>&1) || {
+(/usr/bin/gem spec bundler -v '~> 1.10.5' >/dev/null 2>&1) || {
     log "====> Installing bundler to system ruby"
     /usr/bin/sudo -p "Password for sudo to install bundler: " \
-        /usr/bin/gem install bundler -v '~> 1.5.3' --no-rdoc --no-ri
+        /usr/bin/gem install bundler -v '~> 1.10.5' --no-rdoc --no-ri
 }
-# FIXME: /Library/Ruby/bin doesn't exist, and this seems to be where El Capitan
-# puts its Gem executables
-PATH="/Library/Ruby/Gems/2.0.0/gems/bundler-1.5.3/bin:$PATH"
-
+PATH="/Library/Ruby/bin:$(gem which bundler | sed -e 's!lib/bundler.rb!bin!'):$PATH"
 # Use checksums to quickly determine if we need to re-bundle
 
 checksum_bundle() {
