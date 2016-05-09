@@ -168,4 +168,10 @@ export FZF_DEFAULT_OPTS=\"--color 16\"
 ",
     require     => File[$boxen::config::envdir],
   }
+
+  # Docker tab completion - for Docker Beta
+  homebrew::tap { 'homebrew/completions': }
+  package { 'homebrew/completions/docker-completion':
+    ensure => present,
+  }
 }
