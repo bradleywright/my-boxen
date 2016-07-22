@@ -18,7 +18,7 @@ class common {
   ruby::version { '1.9.3': }
   ruby::version { '2.0.0': }
   ruby::version { '2.1.8': }
-  ruby::version { '2.2.4': }
+  ruby::version { '2.2.5': }
 
   # common, useful packages
   package {

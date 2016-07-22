@@ -1,5 +1,5 @@
 class people::bradwright {
-  ruby::version { '2.3.0': }
+  ruby::version { '2.3.1': }
   nodejs::version { '4.4.1': }
 
   # Null out El Capitan's zprofile so it doesn't break my path:
