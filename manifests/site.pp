@@ -51,22 +51,6 @@ Service {
 
 Homebrew::Formula <| |> -> Package <| |>
 
-node 'MB660.local' {
-  include common
-
-  # 1.8.0, the current version, is quite flakey.
-  class { 'vagrant':
-    version => '1.7.4'
-  }
-
-  # Force latest version of virtualbox - the current boxen module is a 4.x
-  # release
-  class { 'virtualbox':
-    version     => '5.0.16',
-    patch_level => '105871',
-  }
-}
-
 node default {
   include common
 }
