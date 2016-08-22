@@ -97,7 +97,7 @@ alias emacs=/Applications/Emacs.app/Contents/MacOS/Emacs
   # Omnifocus
   package { 'OmniFocus':
     provider => 'appdmg_eula',
-    source   => 'http://www.omnigroup.com/ftp1/pub/software/MacOSX/10.10/OmniFocus-2.4.2.dmg',
+    source   => 'http://www.omnigroup.com/ftp1/pub/software/MacOSX/10.10/OmniFocus-2.6.2.dmg',
   }
 
   # Dispatch x-message protocol handler
