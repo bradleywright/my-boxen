@@ -74,7 +74,7 @@ class people::bradwright {
   # OSX Emacs fixes
   package { 'Emacs':
     provider => 'appdmg',
-    source   => 'http://emacsformacosx.com/emacs-builds/Emacs-pretest-25.0.91-universal.dmg',
+    source   => 'https://emacsformacosx.com/emacs-builds/Emacs-pretest-25.1-rc2-universal.dmg',
     notify   => Exec['fix-emacs-termcap'],
   }
 
