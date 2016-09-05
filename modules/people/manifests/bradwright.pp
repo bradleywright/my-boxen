@@ -18,7 +18,6 @@ class people::bradwright {
 
   include osx::dock::autohide
   include osx::keyboard::capslock_to_control
-  include osx::global::tap_to_click
 
   $my_home  = "/Users/${::boxen_user}"
 
