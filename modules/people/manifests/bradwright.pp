@@ -122,11 +122,11 @@ alias emacs=/Applications/Emacs.app/Contents/MacOS/Emacs
 
   exec { 'install_go_tools':
     environment => ["GOPATH=${my_home}/go"],
-    command     => 'go get golang.org/x/tools/cmd/godoc \
-                    && go get golang.org/x/tools/cmd/vet \
-                    && go get github.com/nsf/gocode \
-                    && go get github.com/rogpeppe/godef \
-                    && go get github.com/kisielk/errcheck \
+    command     => 'go get -u golang.org/x/tools/cmd/godoc \
+                    && go get -u golang.org/x/tools/cmd/vet \
+                    && go get -u github.com/nsf/gocode \
+                    && go get -u github.com/rogpeppe/godef \
+                    && go get -u github.com/kisielk/errcheck \
                     && pkill -f gocode', # kill the gocode daemon
     provider    => shell,
     refreshonly => true,
