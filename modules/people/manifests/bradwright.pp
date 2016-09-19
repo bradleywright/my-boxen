@@ -123,7 +123,6 @@ alias emacs=/Applications/Emacs.app/Contents/MacOS/Emacs
   exec { 'install_go_tools':
     environment => ["GOPATH=${my_home}/go"],
     command     => 'go get -u golang.org/x/tools/cmd/godoc \
-                    && go get -u golang.org/x/tools/cmd/vet \
                     && go get -u github.com/nsf/gocode \
                     && go get -u github.com/rogpeppe/godef \
                     && go get -u github.com/kisielk/errcheck \
