@@ -126,7 +126,7 @@ alias emacs=/Applications/Emacs.app/Contents/MacOS/Emacs
                     && go get -u github.com/nsf/gocode \
                     && go get -u github.com/rogpeppe/godef \
                     && go get -u github.com/kisielk/errcheck \
-                    && pkill -f gocode', # kill the gocode daemon
+                    && pkill -f gocode || true', # kill the gocode daemon
     provider    => shell,
     refreshonly => true,
   }
