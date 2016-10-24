@@ -174,4 +174,12 @@ export FZF_DEFAULT_OPTS=\"--color 16\"
   package { 'homebrew/completions/docker-completion':
     ensure => present,
   }
+
+  # Vim
+  package { 'vim':
+    ensure => present,
+    install_options => [
+      '--with-lua',
+    ]
+  }
 }
